@@ -32,7 +32,7 @@ function checkForMatch(){
   			alert("Sorry, try again");
 	}
 }
-function flipCard(cardId){
+function flipCard(){
 	if (cardsInPlay.length === 2) {
 	checkForMatch();
 	console.log("2 cards played");
@@ -46,14 +46,25 @@ function flipCard(cardId){
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
 }
-flipCard(0)
-flipCard(2)
+
 //
- //function createBoard(){
- 	//for var i = 0 < arrayName.length: i++ {
- 		//logic here
- 	//	var cardElement = document.createElement ("images/queen-of-diamonds.png")
- 	//}
- 
+  function createBoard(){
+ 	for var i = 0 < cards.length: i++
+ 	
+ 		var cardElement = document.createElement ("images/queen-of-hearts.png")
+ 		var cardElement	= document.createElement ("images/queen-of-diamonds.png")
+ 		var cardElement = document.createElement ("images/king-of-hearts.png")
+ 		var	cardElement = document.createElement ("images/king-of-diamonds.png")
+ 	
+ 	cardElement.setAttribute('src',"images/back.png");
+    cardElement.setAttribute('data-id', i );
+
+   cardElement.addEventListener("click",flipcard)
+
+	document.getElementById('cardElement').appendChild("game-board"); 
+}
+ createboard()
+
+
 
 
